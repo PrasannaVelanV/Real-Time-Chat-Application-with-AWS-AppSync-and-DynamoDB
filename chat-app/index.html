@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AWS Real-Time Chat App</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1480.0.min.js"></script>
+</head>
+
+<body>
+
+  <div class="background-glow"></div>
+
+  <div class="chat-container">
+
+    <div class="chat-header">
+      <h1>AWS Chat App</h1>
+      <p>AppSync • DynamoDB • Cognito • S3</p>
+    </div>
+
+    <div id="chat-box"></div>
+
+    <div class="input-section">
+
+      <input
+        type="text"
+        id="username"
+        placeholder="Enter your username"
+      >
+
+      <textarea
+        id="message"
+        placeholder="Type your message..."
+      ></textarea>
+
+      <div class="file-upload-area">
+        <input type="file" id="fileInput">
+      </div>
+
+      <div class="button-group">
+        <button class="upload-btn" onclick="uploadFile()">
+          Upload File
+        </button>
+
+        <button class="send-btn" onclick="sendMessage()">
+          Send Message
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
